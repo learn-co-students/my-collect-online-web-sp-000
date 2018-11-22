@@ -1,14 +1,9 @@
-def my_collect(collection)
-  collection = []
+def my_collect(array)
   i = 0
-  while i < array.length
-    collection<<yield(array[i])
+  names = []
+  while array.size > i do
+    names << yield(array[i])
     i += 1
   end
-  collection
-end
-
-
-my_collect(collection) do |name|
-  name.split(" ").first
+  names
 end
