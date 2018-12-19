@@ -1,24 +1,9 @@
-def my_collect(collection)
-
-i = 0 
-
-result= []
-  if collection[0] = "Tim Jones"
-    while  i < collection.length 
-      item = collection[i]
-      yield(item)
-      item.split(" ").first
-      result << item
-      i += 1
-    end
-    elsif collection[0] = "ruby"
-    while  i < collection.length 
-      item = collection[i]
-      yield(item)
-      item.upcase
-      result << item
-      i += 1
+def my_collect(array)
+  i = 0
+  collect = []
+  while i < array.length
+    collect << yield(array[i])
+    i+=1
+  end
+  collect
 end
-result
-end 
-
