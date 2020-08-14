@@ -3,8 +3,8 @@
 def my_collect(collection)
     i = 0
     modified_collection = []
-    while i < collection.length do |item|
-        modified_collection << yield(item)
+    while i < collection.length do
+        modified_collection << yield(collection[i])
         i += 1
     end
     modified_collection
