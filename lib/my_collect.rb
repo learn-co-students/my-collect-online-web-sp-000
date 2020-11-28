@@ -1,27 +1,16 @@
-def my_collect(languages)
-  counter = 0 
-  if languages == []
+def my_collect(array)
+  if array == []
     puts "The array is emmpty"
-  else 
-  while counter <= languages.length 
-  value = languages.upcase
-  counter +=1 
-  end 
-  value 
+  else i = 0 
+  results = [] 
+    while i < array.length 
+      value = yield array[i]
+      puts value
+    return results 
+   i += 1 
+ end 
+   results << value 
 end 
 end 
-
-
-def my_collect(students)
-  if students == []
-    puts "The array is emmpty"
-  else 
-  counter = 0 
-  while counter <= students.length 
-  value = students.join (" ")
-  results = value.split.first  
-  counter +=1 
-  end 
-  value 
-end 
-end 
+ 
+ 
